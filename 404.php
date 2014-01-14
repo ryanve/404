@@ -13,12 +13,10 @@
 </style>
 
 <h1>Not Found <span>:(</span></h1>
-<div>
-  <p>The link was either <b>outdated</b> or <b>mistyped</b>.
-  <h4><a href="/">Visit home</a> or search:</h4>
-  <form role="search" method="get" action="http://www.google.com/search">
-    <input name="sitesearch" type="radio" value="<?php echo $_SERVER['SERVER_NAME']; ?>" checked hidden>
-    <input name="q" type="search">
-    <input type="submit" value="Search">
-  </form>
-</div>
+<p>The link was either <b>outdated</b> or <b>mistyped</b>.
+<form role="search" method="get" action="http://www.google.com/search">
+  <input name="sitesearch" type="radio" value="<?php echo $_SERVER['SERVER_NAME']; ?>" checked hidden>
+  <input name="q" type="search">
+  <input type="submit" value="Search">
+</form>
+<p><a href="/">Home</a>

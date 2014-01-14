@@ -13,24 +13,17 @@
 </style>
 
 <h1>Not Found <span>:(</span></h1>
-<div>
-  <p>The link was either <b>outdated</b> or <b>mistyped</b>.
-  <noscript><a href="/">Visit home</a>.</noscript>
-  <div hidden>
-    <h4><a href="/">Visit home</a> or search:</h4>
-    <form role="search" method="get" action="http://google.com/search">
-      <input name="sitesearch" type="radio" value checked hidden>
-      <input name="q" type="search">
-      <input type="submit" value="Search">
-    </form>
-  </div>
-</div>
+<p>The link was either <b>outdated</b> or <b>mistyped</b>.
+<form role="search" method="get" action="http://google.com/search">
+  <input name="sitesearch" type="radio" value checked hidden>
+  <input name="q" type="search">
+  <input type="submit" value="Search">
+</form>
+<p><a href="/">Home</a>
 
 <script>
 (function(doc, site) {
-  for (var e, i = -1, els = doc.getElementsByTagName('input'); e = els[++i];)
-    if ('sitesearch' === e.name)
-      for (e.value = site; e = e.parentNode, e !== doc;)
-        e.removeAttribute('hidden');
+  var e, i = -1, els = doc.getElementsByTagName('input');
+  while (e = els[++i]) 'sitesearch' === e.name && (e.value = site);
 }(document, location.hostname));
 </script>
