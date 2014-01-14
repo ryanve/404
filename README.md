@@ -1,4 +1,7 @@
-404
-===
+# [404](../../)
 
 404 page examples
+
+## License
+
+MIT
