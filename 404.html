@@ -28,7 +28,7 @@
 
 <script>
 (function(doc, site) {
-  var e = site && doc.querySelector && doc.querySelector('[name="sitesearch"]');
-  if (e) for (e.setAttribute('value', site); e = e.parentNode, e && e != doc;) e.removeAttribute('hidden');
+  var e = doc.querySelector && doc.querySelector('[name="sitesearch"]');
+  if (e) for (e.value = site; e = e.parentNode, e !== doc;) e.removeAttribute('hidden');
 }(document, location.hostname));
 </script>
